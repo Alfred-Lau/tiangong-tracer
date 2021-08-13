@@ -2,4 +2,4 @@
 
 天工工程体系的网页跟踪 sdk
 
-[![tiangong-tracert deploy](https://github.com/Alfred-Lau/tiangong-tracert/actions/workflows/deploy.yml/badge.svg)](https://github.com/Alfred-Lau/tiangong-tracert/actions/workflows/deploy.yml)
+[![tiangong-tracert deploy](https://github.com/Alfred-Lau/tiangong-tracert/actions/workflows/deploy.yml/badge.svg?branch=main)](https://github.com/Alfred-Lau/tiangong-tracert/actions/workflows/deploy.yml)
