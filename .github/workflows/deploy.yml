@@ -1,38 +1,39 @@
 name: tiangong-tracert deploy
 
 on:
-    push:
-        branches: [main]
-        paths:
-            - ".github/workflows/**"
-            - "__test__/**"
-            - "src/**"
-    pull_request:
-        branches: [main]
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/**"
+      - "__test__/**"
+      - "src/**"
+  pull_request:
+    branches: [main]
 
 jobs:
-    build:
-        runs-on: ubuntu-latest
+  build:
+    runs-on: ubuntu-latest
 
-        strategy:
-            matrix:
-                node-version: [14.x, 15.x]
-                # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+    strategy:
+      matrix:
+        node-version: [14.x, 15.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
-        steps:
-            - uses: actions/checkout@v2
-            - name: Use Node.js ${{ matrix.node-version }}
-              uses: actions/setup-node@v1
-              with:
-                  node-version: ${{ matrix.node-version }}
-            - run: npm install
-            - run: npm run build --if-present
-            - uses: manyuanrong/setup-ossutil@v1.0
-                with:
-                    # endpoint 可以去oss控制台上查看
-                    endpoint: "oss-cn-beijing.aliyuncs.com"
-                    # 使用我们之前配置在secrets里面的accesskeys来配置ossutil
-                    access-key-id: ${{ secrets.ACCESS_KEY }}
-                    access-key-secret: ${{ secrets.ACCESS_SECRET }}
-            - name: Deply To OSS
-                run: ossutil cp dist oss://tiangong-tracert/ -rf
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: npm install
+      - run: npm run build --if-present
+      - name: deploy to OSS
+        uses: manyuanrong/setup-ossutil@v1.0
+        with:
+          # endpoint 可以去oss控制台上查看
+          endpoint: "oss-cn-beijing.aliyuncs.com"
+          # 使用我们之前配置在secrets里面的accesskeys来配置ossutil
+          access-key-id: ${{ secrets.ACCESS_KEY }}
+          access-key-secret: ${{ secrets.ACCESS_SECRET }}
+      - name: Deply To OSS
+        run: ossutil cp dist oss://tiangong-tracert/ -rf
