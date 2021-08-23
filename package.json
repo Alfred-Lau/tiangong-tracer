@@ -1,6 +1,6 @@
 {
-  "name": "@tiangongkit/log-sdk",
-  "version": "0.0.4",
+  "name": "log",
+  "version": "0.0.7",
   "main": "dist/tiangong-sdk.cjs.js",
   "module": "dist/tiangong-sdk.esm.js",
   "browser": "dist/tiangong-sdk.umd.js",
@@ -8,11 +8,8 @@
   "devDependencies": {
     "@types/ms": "^0.7.30",
     "@types/uuid": "^8.3.0",
-    "autod": "^3.0.1",
-    "egg-bin": "^4.3.7",
     "eslint": "^6.7.2",
     "eslint-config-egg": "^8.0.0",
-    "lerna": "^3.22.1",
     "rollup": "^1.0.0",
     "rollup-plugin-commonjs": "^9.2.0",
     "rollup-plugin-node-builtins": "^2.1.2",
@@ -41,8 +38,10 @@
     "dev": "rollup -c -w",
     "test": "ts-node test/test.ts",
     "pretest": "npm run build",
+    "autod": "autod",
     "lint": "eslint .",
     "cov": "egg-bin cov",
+    "ci": "npm run lint && egg-bin pkgfiles --check && npm run cov",
     "pkgfiles": "egg-bin pkgfiles"
   },
   "license": "MIT"

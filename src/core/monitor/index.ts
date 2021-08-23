@@ -17,11 +17,12 @@ export default class Monitor extends Base {
   }
 
   _start() {
+    new Route({}).start();
+
     // 监听鼠标事件【1.点击页面；2.点击链接】
     new Mouse({}).start();
 
     // 监听卸载页面
     new BeforeUpload({}).start();
-    new Route({}).start();
   }
 }
