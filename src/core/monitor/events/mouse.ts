@@ -27,9 +27,9 @@ export default class Mouse extends BaseEvent implements IMouseEvent {
       // 处理 A 标签 跳转
       console.log("我是a 标签,直接处理", target);
       const utm_d = tryToGetAttribute(target, "data-utm-click");
-      const payload = tryToGetAttribute(target, "data-utm-extra") || "{}";
+      const payload = tryToGetAttribute(target, "data-utm-extra") || {};
       if (utm_d && payload) {
-        this.sendEvent(e, utm_d, "click", JSON.parse(payload));
+        this.sendEvent(e, utm_d, "click", payload);
         return;
       }
 
@@ -58,11 +58,11 @@ export default class Mouse extends BaseEvent implements IMouseEvent {
     // 非 跳转标签
     for (let utm_d; target && target.tagName !== "HTML"; ) {
       utm_d = tryToGetAttribute(target, "data-utm-click");
-      const payload = tryToGetAttribute(target, "data-utm-extra") || "{}";
+      const payload = tryToGetAttribute(target, "data-utm-extra") || {};
 
       let extra;
       try {
-        extra = JSON.parse(payload);
+        extra = payload;
       } catch (error) {
         console.error(error);
       }

@@ -1,5 +1,3 @@
-import { REPORTER_URL, DEFAULT_UUID } from "../constant/index";
-import { parseObjToQuery } from "./common";
 import logger from "./log-service";
 import { getUuid } from "./uuid";
 
@@ -11,14 +9,14 @@ export function reportWithBeacon(data: any) {
 }
 
 export function report(data: any) {
-  // const src = `${REPORTER_URL}?${parseObjToQuery(data)}`;
-  // const img = new Image();
-  console.log("reporter data:", data);
+  // 用户来进行未登录用户标识
   const uuid = getUuid();
+  // 用户来进行登录用户标识
+  const userid = window.context?.userid || null;
+  // 用户来进行登录用户标识
+  const user = window.context?.user || {};
+  //用来区分环境
+  const env = location.origin;
 
-  // img.src = src;
-  // 日志上报
-  // 日志主题
-
-  logger.send({ haha: "hahahah", uuid, ...data });
+  logger.send({ env, userid, user, uuid, ...data });
 }
