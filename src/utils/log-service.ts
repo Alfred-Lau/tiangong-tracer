@@ -1,4 +1,4 @@
-import SlsWebLogger from "js-sls-logger";
+import * as SlsWebLogger from "js-sls-logger";
 import { LogOpts } from "../config/log";
 
 const logger = new SlsWebLogger(LogOpts);
