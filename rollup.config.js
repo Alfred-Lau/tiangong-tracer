@@ -31,6 +31,8 @@ export default [
     input: "src/index.ts",
     external: ["ms"],
     plugins: [
+      commonjs(), // so Rollup can convert `ms` to an ES module
+
       typescript(), // so Rollup can convert TypeScript to JavaScript
     ],
     output: [
