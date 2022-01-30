@@ -13,10 +13,10 @@ export default function bootstrap(): void {
   const reporter = new Reporter();
   reporter.bootstrap();
 }
-if (!window.oblog) {
-  window.oblog = logger;
+if (!window.tiangonglog) {
+  window.tiangong = logger;
 }
 
-export const oblog = logger;
+export const tiangonglog = logger;
 
 bootstrap();
