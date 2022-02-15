@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c4e2bbdb-3383-4e67-80c1-d9868317cd39" name="Changes" comment="feat: typo">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rollup.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/log.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constant/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/agent/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/base/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/index/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/index/sendPv.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/index/sendUv.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/meta/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/monitor/events/base.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/monitor/events/beforeUnload.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/monitor/events/mouse.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/monitor/events/route.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/monitor/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/trcert/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/utm/ignore.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/utm/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/utm/util.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/core/utm/utmParams.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/base.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/event.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/user.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/userAgent.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/index.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/typings/global.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/common.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/cookie.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/dom/attr.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/error.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/getUtmA.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/location.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/log-service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/log.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/mouse.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/pvid.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/report.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/uuid.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/version.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/.github/workflows/deploy.yml" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="1vzow9xr" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="21gwJv68cnoXjkSZs3nrwsFtOV3" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
+    <property name="settings.editor.selected.configurable" value="settings.javascript.prettier" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c4e2bbdb-3383-4e67-80c1-d9868317cd39" name="Changes" comment="" />
+      <created>1638375969708</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1638375969708</updated>
+      <workItem from="1638375971001" duration="1046000" />
+      <workItem from="1638455910360" duration="590000" />
+      <workItem from="1638718718232" duration="52000" />
+      <workItem from="1639406102928" duration="598000" />
+      <workItem from="1639742958729" duration="91000" />
+      <workItem from="1639749592940" duration="330000" />
+      <workItem from="1639838680119" duration="598000" />
+      <workItem from="1639884034990" duration="363000" />
+      <workItem from="1640183701835" duration="35000" />
+      <workItem from="1640191931382" duration="104000" />
+      <workItem from="1640192350102" duration="22000" />
+      <workItem from="1640279739203" duration="1025000" />
+      <workItem from="1640803691836" duration="927000" />
+      <workItem from="1640968364592" duration="7000" />
+      <workItem from="1641570208987" duration="1018000" />
+      <workItem from="1641650101229" duration="829000" />
+      <workItem from="1641826354695" duration="20000" />
+      <workItem from="1643034289467" duration="1539000" />
+      <workItem from="1643259751418" duration="599000" />
+      <workItem from="1643372633516" duration="599000" />
+      <workItem from="1643548805148" duration="621000" />
+      <workItem from="1644499508999" duration="348000" />
+      <workItem from="1644502306854" duration="111000" />
+      <workItem from="1644642840267" duration="1279000" />
+    </task>
+    <task id="LOCAL-00001" summary="feat: typo">
+      <created>1643557641766</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1643557641766</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="feat: typo" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: typo" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

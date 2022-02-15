@@ -1,13 +1,7 @@
-## 关于鼠标点击事件的分类
+-   workspaces 是需要在 pnpm install 的时候安装的
 
-- a 标签
+# how to start
 
-如果是 a 标签就意味着要进行跳转
-
-- button 标签
-
-- area 标签
-
-- 页面其他的点击事件
-
-更新了版本号哈
+1. pnpm install
+2. pnpm start
+3. open examples/basic/index.html
