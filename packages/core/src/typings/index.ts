@@ -5,6 +5,14 @@ declare namespace CORE {
          *
          * @type {number}
          */
-        threshhold?: number;
+        threshold?: number;
     };
 }
+
+
+type CookieInterface ={
+    expires?: Date
+}
+
+
+

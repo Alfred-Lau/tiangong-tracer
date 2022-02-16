@@ -2,19 +2,54 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4e2bbdb-3383-4e67-80c1-d9868317cd39" name="Changes" comment="feat: typo">
+      <change afterPath="$PROJECT_DIR$/packages/shared/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/shared/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/utils/src/error.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/core/lib/index.browser.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/core/lib/index.browser.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/core/lib/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/core/lib/index.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/core/lib/index.module.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/core/lib/index.module.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/core/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/core/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/core/src/constant/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/shared/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/core/src/tracert/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/core/src/tracert/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/core/src/typings/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/core/src/typings/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/core/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/core/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/utils/lib/index.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/utils/lib/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/utils/lib/index.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/utils/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/utils/src/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pnpm-workspace.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-workspace.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="tsconfig.json" />
+        <option value="package.json" />
+        <option value="TypeScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/.github/workflows/deploy.yml" root0="FORCE_HIGHLIGHTING" />
@@ -51,6 +86,11 @@
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/packages/shared/src" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -85,7 +125,7 @@
       <workItem from="1644642840267" duration="1279000" />
       <workItem from="1644986738822" duration="1768000" />
       <workItem from="1645000782959" duration="14000" />
-      <workItem from="1645001121715" duration="264000" />
+      <workItem from="1645001121715" duration="3694000" />
     </task>
     <task id="LOCAL-00001" summary="feat: typo">
       <created>1643557641766</created>
