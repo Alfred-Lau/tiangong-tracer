@@ -5,12 +5,14 @@
     "main": "index.js",
     "scripts": {
         "start": "pnpm -C ./packages/core dev & pnpm -C ./packages/utils dev",
+        "open": "open-cli http://localhost:3000",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "devDependencies": {
+        "open-cli": "^7.0.1",
         "rimraf": "^3.0.2",
         "tslib": "2.2.0",
         "typescript": "^4.5.5"

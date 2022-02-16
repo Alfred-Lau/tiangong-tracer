@@ -5,3 +5,11 @@
 1. pnpm install
 2. pnpm start
 3. open examples/basic/index.html
+
+# 系统设计
+
+0216：
+- 描述功能
+- 设计数据结构
+- 设计插件机制，分包
+- 补充测试用例

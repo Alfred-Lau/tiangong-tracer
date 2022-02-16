@@ -2,52 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4e2bbdb-3383-4e67-80c1-d9868317cd39" name="Changes" comment="feat: typo">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rollup.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/log.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constant/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/agent/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/base/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/index/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/index/sendPv.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/index/sendUv.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/meta/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/monitor/events/base.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/monitor/events/beforeUnload.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/monitor/events/mouse.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/monitor/events/route.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/monitor/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/trcert/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/utm/ignore.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/utm/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/utm/util.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/core/utm/utmParams.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/base.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/event.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/user.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/userAgent.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/typings/global.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/common.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/cookie.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/dom/attr.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/error.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/getUtmA.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/location.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/log-service.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/log.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/mouse.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/pvid.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/report.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/uuid.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/version.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pnpm-workspace.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-workspace.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,6 +24,9 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="PackageJsonUpdateNotifier">
+    <dismissed value="$PROJECT_DIR$/package.json" />
   </component>
   <component name="ProjectId" id="21gwJv68cnoXjkSZs3nrwsFtOV3" />
   <component name="ProjectLevelVcsManager">
@@ -121,6 +83,9 @@
       <workItem from="1644499508999" duration="348000" />
       <workItem from="1644502306854" duration="111000" />
       <workItem from="1644642840267" duration="1279000" />
+      <workItem from="1644986738822" duration="1768000" />
+      <workItem from="1645000782959" duration="14000" />
+      <workItem from="1645001121715" duration="264000" />
     </task>
     <task id="LOCAL-00001" summary="feat: typo">
       <created>1643557641766</created>
