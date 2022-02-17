@@ -2,29 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4e2bbdb-3383-4e67-80c1-d9868317cd39" name="Changes" comment="feat: typo">
-      <change afterPath="$PROJECT_DIR$/packages/shared/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/shared/tsconfig.json" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/packages/utils/src/error.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/core/lib/index.browser.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/core/lib/index.browser.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/core/lib/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/core/lib/index.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/core/lib/index.module.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/core/lib/index.module.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/core/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/core/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/core/src/constant/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/shared/src/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/core/src/tracert/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/core/src/tracert/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/core/src/typings/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/core/src/typings/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/core/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/core/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/utils/lib/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/utils/lib/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/utils/lib/index.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/utils/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/utils/src/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +44,7 @@
     <dismissed value="$PROJECT_DIR$/package.json" />
   </component>
   <component name="ProjectId" id="21gwJv68cnoXjkSZs3nrwsFtOV3" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
