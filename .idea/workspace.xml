@@ -43,6 +43,9 @@
   <component name="PackageJsonUpdateNotifier">
     <dismissed value="$PROJECT_DIR$/package.json" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
   <component name="ProjectId" id="21gwJv68cnoXjkSZs3nrwsFtOV3" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -63,7 +66,7 @@
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
     <property name="settings.editor.selected.configurable" value="settings.javascript.prettier" />
-    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -105,7 +108,8 @@
       <workItem from="1644642840267" duration="1279000" />
       <workItem from="1644986738822" duration="1768000" />
       <workItem from="1645000782959" duration="14000" />
-      <workItem from="1645001121715" duration="3694000" />
+      <workItem from="1645001121715" duration="4297000" />
+      <workItem from="1645164678580" duration="9273000" />
     </task>
     <task id="LOCAL-00001" summary="feat: typo">
       <created>1643557641766</created>
