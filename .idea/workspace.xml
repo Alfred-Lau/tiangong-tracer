@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c4e2bbdb-3383-4e67-80c1-d9868317cd39" name="Changes" comment="feat: typo">
-      <change afterPath="$PROJECT_DIR$/packages/utils/src/error.ts" afterDir="false" />
+    <list default="true" id="c4e2bbdb-3383-4e67-80c1-d9868317cd39" name="Changes" comment="feat: add general error">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/core/src/tracert/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/core/src/tracert/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/core/src/base/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/core/src/base/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/core/src/http/eventType.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/core/src/http/eventType.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/core/src/typings/model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/core/src/typings/model.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,6 +111,8 @@
       <workItem from="1645000782959" duration="14000" />
       <workItem from="1645001121715" duration="4297000" />
       <workItem from="1645164678580" duration="9273000" />
+      <workItem from="1645261603482" duration="536000" />
+      <workItem from="1645270944530" duration="339000" />
     </task>
     <task id="LOCAL-00001" summary="feat: typo">
       <created>1643557641766</created>

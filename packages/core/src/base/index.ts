@@ -7,9 +7,10 @@
  */
 import http from "../http";
 
-export default class Base {
+export default class Base extends BaseClass {
   public http: (...args: any[]) => void;
   constructor() {
+    super("");
     this.http = http;
   }
 }
