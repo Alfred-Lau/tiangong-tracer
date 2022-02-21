@@ -1,8 +1,10 @@
 import { log, noop } from "@tg/utils";
 import Base from "../base";
+import click from "../plugins/click";
 
 const defaultOptions = {};
-const defaultPlugins = [noop];
+// const defaultPlugins = [noop];
+const defaultPlugins = [{ name: "click", plugin: click }];
 
 export default class Tracer extends Base {
   private plugins = [] as any[];
@@ -23,11 +25,12 @@ export default class Tracer extends Base {
   }
 
   public mergePluginOptions(name: string, option: Partial<CORE.PluginOptions>) {
-    log.info(this.options, option);
+    log.info(option);
   }
 
   public addPlugins(plugin: handleType, option: Partial<CORE.PluginOptions>) {
     this.mergePluginOptions("", option);
+    // push 一个函数或者类进去
     this.plugins.push({ name: plugin.name, plugin });
   }
 
@@ -41,17 +44,19 @@ export default class Tracer extends Base {
     } catch (e) {
       log.error("check failed", "检查失败，不会启动实例");
     }
-    defaultPlugins.forEach((plugin) => {
-      const pluginInstance = this.addPlugins(plugin, {});
+    defaultPlugins.forEach(({ name, plugin }) => {
+      this.addPlugins(plugin, { name });
     });
   }
 
   public run() {
     //该阶段执行的流程：1. 依次启动插件；2. 插件都启动之后，开始启动应用上报
-    log.info("run", this);
+    log.info("run");
     this.plugins.forEach((p) => {
       // 1.0.0 支持同步插件
       // p(this, {});
+      const { name, plugin } = p;
+      const instance = new plugin(this);
     });
 
     //  3. 首次上报

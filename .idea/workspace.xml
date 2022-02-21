@@ -1,23 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c4e2bbdb-3383-4e67-80c1-d9868317cd39" name="Changes" comment="feat: typo">
-      <change afterPath="$PROJECT_DIR$/packages/core/src/typings/common.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/core/src/typings/event.ts" afterDir="false" />
+    <list default="true" id="c4e2bbdb-3383-4e67-80c1-d9868317cd39" name="Changes" comment="feat: add basic class and log utils and lifecycle">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/basic/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/examples/basic/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/core/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/packages/core/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/core/global.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/core/global.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/core/src/base/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/core/src/base/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/core/src/bootstrap.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/core/src/bootstrap.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/core/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/core/src/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/core/src/models/agent.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/core/src/models/agent.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/core/src/plugins/click.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/core/src/plugins/click.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/core/src/tracer/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/core/src/tracer/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/core/src/typings/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/core/src/typings/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/core/src/typings/model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/core/src/typings/model.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/utils/src/error.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/utils/src/log.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/utils/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/utils/src/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,7 +120,14 @@
       <option name="project" value="LOCAL" />
       <updated>1643557641766</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="feat: add basic class and log utils and lifecycle">
+      <created>1645437664808</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1645437664808</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -153,7 +147,8 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="feat: typo" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: typo" />
+    <MESSAGE value="feat: add basic class and log utils and lifecycle" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: add basic class and log utils and lifecycle" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
