@@ -1,6 +1,7 @@
-import { addTwo, minus } from "@tg/utils";
+import { addTwo, minus, log } from "@tg/utils";
 import tracer from "./bootstrap";
 
-console.log(addTwo(100, 200), minus(200, 100));
+log.info(minus(200, 100));
+log.info(addTwo(100, 200));
 
 export default tracer;

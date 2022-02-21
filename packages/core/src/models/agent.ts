@@ -1,5 +1,5 @@
-export default class UserAgent {
-  private collect(): Model.UserAgentInfo {
+export default class UserAgent implements Model {
+  private _collect(): Model.UserAgentInfo {
     const browser = this.browser;
     const device = this.device;
     const engine = this.engine;
@@ -19,7 +19,7 @@ export default class UserAgent {
   }
 
   public get info(): Model.UserAgentInfo {
-    return this.collect();
+    return this._collect();
   }
 
   private get browser(): Model.UserAgentInfo["browser"] {

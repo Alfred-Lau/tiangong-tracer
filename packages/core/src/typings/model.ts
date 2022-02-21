@@ -12,10 +12,3 @@ declare namespace Model {
     screen: string;
   };
 }
-
-declare class BaseClass {
-  constructor(name: string);
-  constructor(name: string, age: number);
-  public name: string;
-  public sayName(): void;
-}
