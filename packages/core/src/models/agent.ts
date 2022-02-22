@@ -1,19 +1,25 @@
+import UA from "ua-parser-js";
+
 export default class UserAgent implements Model {
+  private ua: UA;
+  constructor() {
+    this.ua = new UA();
+  }
   private _collect(): Model.UserAgentInfo {
     const browser = this.browser;
     const device = this.device;
     const engine = this.engine;
     const os = this.os;
     const cpu = this.cpu;
-    const ua = this.ua;
-    const screen = this.screen;
+    const useragent = this.useragent;
+    const screen = UserAgent.screen;
     return {
       browser,
       device,
       engine,
       os,
       cpu,
-      ua,
+      useragent,
       screen,
     };
   }
@@ -23,40 +29,27 @@ export default class UserAgent implements Model {
   }
 
   private get browser(): Model.UserAgentInfo["browser"] {
-    return {
-      name: "chrome",
-      version: "",
-      major: "",
-    };
+    return this.ua.getBrowser();
   }
   private get device(): Model.UserAgentInfo["device"] {
-    return {
-      model: "",
-      vendor: "",
-      type: "",
-    };
+    return this.ua.getDevice();
   }
   private get engine(): Model.UserAgentInfo["engine"] {
-    return {
-      name: "chrome",
-      version: "",
-    };
+    return this.ua.getEngine();
   }
   private get cpu(): Model.UserAgentInfo["cpu"] {
-    return {
-      architecture: "",
-    };
+    return this.ua.getCPU();
   }
   private get os(): Model.UserAgentInfo["os"] {
+    return this.ua.getOS();
+  }
+  private get useragent(): Model.UserAgentInfo["useragent"] {
+    return this.ua.getUA();
+  }
+  private static get screen(): Model.UserAgentInfo["screen"] {
     return {
-      name: "chrome",
-      version: "",
+      width: screen.width,
+      height: screen.height,
     };
-  }
-  private get ua(): Model.UserAgentInfo["ua"] {
-    return "";
-  }
-  private get screen(): Model.UserAgentInfo["screen"] {
-    return "";
   }
 }

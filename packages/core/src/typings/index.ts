@@ -1,7 +1,7 @@
 declare namespace CORE {
   type BootstrapOptions = {
     // 属性
-    threshold?: number;
+    threshold: number;
 
     //  事件
     //每次上报之前需要进行工作：比如采集一下当前的时刻信息
@@ -28,6 +28,7 @@ type CommonResponseType = {
 
 declare class BaseClass {
   constructor(name?: string);
+  public pluginCount: number;
   // 生命周期/发送请求之前调用
   public beforeEachSendPV(fn: handleType): void;
   // 生命周期/发送请求之后调用

@@ -8,7 +8,6 @@ declare namespace Model {
     engine: UAParser.IEngine;
     os: UAParser.IOS;
     cpu: UAParser.ICPU;
-    ua: string;
-    screen: string;
-  };
+    screen: { width: number; height: number };
+  } & { useragent: string };
 }

@@ -1,5 +1,3 @@
-export const addTwo = (a: number, b: number) => a + b;
-export const minus = (a: number, b: number) => a - b;
 export const isBrowser = typeof window !== "undefined";
 export const noop = () => {};
 export const isFunction = (fn: any): fn is Function => {
@@ -7,3 +5,4 @@ export const isFunction = (fn: any): fn is Function => {
 };
 
 export * as log from "./log";
+export * as cookie from "./cookie";

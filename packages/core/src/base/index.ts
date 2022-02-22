@@ -9,10 +9,15 @@ export default class Base implements BaseClass {
   public http: (...args: any[]) => void;
   public beforeEachSendPVEvents: handleType[] = [];
   public afterEachSendPVEvents: handleType[] = [];
+  public pluginCount: number = 0;
+  public eventsCache: {};
   constructor(public name: string) {
     this.http = http;
+    //各类事件的缓存
+    this.eventsCache = {};
   }
 
+  // 事件周期的回调
   public beforeEachSendPV(fn = noop) {
     if (!isFunction(fn)) {
       log.error("注册的事件只能是函数", "");
@@ -29,20 +34,26 @@ export default class Base implements BaseClass {
     this.afterEachSendPVEvents.push(fn);
   }
 
+  // TODO: 事件注册
+
+  // TODO: 生命周期的实现
+
+  // 基础上报的实现
   public async send(eventName: string): Promise<any> {
     this.beforeEachSendPVEvents.map((ev) => {
       ev && ev();
     });
 
-    function inner() {
-      log.info(eventName);
-    }
-    return Promise.resolve()
-      .then(inner)
-      .finally(() => {
-        this.afterEachSendPVEvents.map((ev) => {
-          ev && ev();
-        });
+    const payload: Partial<SimpleEventPayloadType> = {
+      eventType: "click",
+    };
+
+    this.http(payload);
+
+    return Promise.resolve().finally(() => {
+      this.afterEachSendPVEvents.map((ev) => {
+        ev && ev();
       });
+    });
   }
 }

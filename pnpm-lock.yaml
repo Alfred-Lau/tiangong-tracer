@@ -46,7 +46,13 @@ importers:
       rollup-plugin-node-builtins: 2.1.2
 
   packages/utils:
-    specifiers: {}
+    specifiers:
+      '@types/js-cookie': ^3.0.1
+      js-cookie: ^3.0.1
+    dependencies:
+      js-cookie: 3.0.1
+    devDependencies:
+      '@types/js-cookie': 3.0.1
 
 packages:
 
@@ -200,6 +206,10 @@ packages:
 
   /@types/estree/0.0.51:
     resolution: {integrity: sha512-CuPgU6f3eT/XgKKPqKd/gLZV1Xmvf1a2R5POBOGQa6uv82xpls89HU5zKeVoyR8XzHd1RGNOlQlvUe3CFkjWNQ==}
+    dev: true
+
+  /@types/js-cookie/3.0.1:
+    resolution: {integrity: sha512-7wg/8gfHltklehP+oyJnZrz9XBuX5ZPP4zB6UsI84utdlkRYLnOm2HfpLXazTwZA+fpGn0ir8tGNgVnMEleBGQ==}
     dev: true
 
   /@types/minimist/1.2.2:
@@ -891,6 +901,11 @@ packages:
   /isbuffer/0.0.0:
     resolution: {integrity: sha1-OMFG2d9Si4v5sHAcPUPPEt8/w5s=}
     dev: true
+
+  /js-cookie/3.0.1:
+    resolution: {integrity: sha512-+0rgsUXZu4ncpPxRL+lNEptWMOWl9etvPHc/koSRp6MPwpRYAhmk0dUG00J4bxVV3r9uUzfo24wW0knS07SKSw==}
+    engines: {node: '>=12'}
+    dev: false
 
   /js-tokens/4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}

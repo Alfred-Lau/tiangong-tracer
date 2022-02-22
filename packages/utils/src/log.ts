@@ -13,12 +13,13 @@ export function error(type: string, msg: string) {
   console.log(`%c ${type}, %c ${msg}`, "color: #fdfdfd", "color:red");
 }
 
-export function info(msg: string | number | object) {
+export function info(msg: string | number | object, ...rest: any[]) {
   if (typeof msg === "object") {
     console.dir(msg);
   } else {
+    const str = [msg + "", ...rest].join(" ");
     console.log(
-      `%c ${msg}`,
+      `%c ${str}`,
       "color: #333;background-color:#999;line-height:12px;font-size:12px;padding:2px;"
     );
   }
