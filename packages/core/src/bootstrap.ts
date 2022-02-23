@@ -26,6 +26,11 @@ function testAfterHook() {
 }
 
 if (isBrowser) {
+  const oldOnError = window.onerror;
+  window.onerror = function (e) {
+    log.error("row", "sdk 发生了错误");
+    oldOnError && oldOnError(e);
+  };
   bootstrap({
     beforeEachSendPV: testBeforeHook,
     afterEachSendPV: testAfterHook,

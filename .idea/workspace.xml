@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c4e2bbdb-3383-4e67-80c1-d9868317cd39" name="Changes" comment="feat: 添加了基类的前置后置钩子方法；业务tracer 进一步丰富功能，提供 model和插件的机制">
-      <change afterPath="$PROJECT_DIR$/packages/core/src/utils/version.ts" afterDir="false" />
+    <list default="true" id="c4e2bbdb-3383-4e67-80c1-d9868317cd39" name="Changes" comment="feat: 重构了 tracer 的实现逻辑">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/core/src/base/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/core/src/base/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/core/src/models/agent.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/core/src/models/agent.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/core/src/tracer/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/core/src/tracer/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/utils/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/utils/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/core/src/bootstrap.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/core/src/bootstrap.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +113,7 @@
       <workItem from="1645164678580" duration="9273000" />
       <workItem from="1645261603482" duration="536000" />
       <workItem from="1645270944530" duration="339000" />
-      <workItem from="1645509841474" duration="12725000" />
+      <workItem from="1645509841474" duration="13207000" />
     </task>
     <task id="LOCAL-00001" summary="feat: typo">
       <created>1643557641766</created>
@@ -140,7 +136,14 @@
       <option name="project" value="LOCAL" />
       <updated>1645524084337</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="feat: 重构了 tracer 的实现逻辑">
+      <created>1645610785098</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1645610785098</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -162,7 +165,8 @@
     <MESSAGE value="feat: typo" />
     <MESSAGE value="feat: add basic class and log utils and lifecycle" />
     <MESSAGE value="feat: 添加了基类的前置后置钩子方法；业务tracer 进一步丰富功能，提供 model和插件的机制" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: 添加了基类的前置后置钩子方法；业务tracer 进一步丰富功能，提供 model和插件的机制" />
+    <MESSAGE value="feat: 重构了 tracer 的实现逻辑" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: 重构了 tracer 的实现逻辑" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
