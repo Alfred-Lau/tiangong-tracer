@@ -15,5 +15,12 @@ export const isEmptyObject = (obj: object | NullOrUndefinedType): boolean => {
   return Object.keys(obj).length === 0;
 };
 
+export const defineProperties = <T>(
+  key: T,
+  prop: PropertyDescriptorMap & ThisType<T>
+) => {
+  Object.defineProperties(key, prop);
+};
+
 export * as log from "./log";
 export * as cookie from "./cookie";

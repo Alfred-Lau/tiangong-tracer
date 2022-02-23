@@ -29,14 +29,15 @@ type CommonResponseType = {
 declare class BaseClass {
   constructor(name?: string);
   public pluginCount: number;
+  public modelCount: number;
   // 生命周期/发送请求之前调用
   public beforeEachSendPV(fn: handleType): void;
   // 生命周期/发送请求之后调用
   public afterEachSendPV(fn: handleType): void;
 
   // 上报相关逻辑: 重载接口
-  public send(eventName: string): Promise<CommonResponseType>;
-  public send(eventName: string, payload: any): Promise<CommonResponseType>;
+  public send(eventName: string): void;
+  public send(eventName: string, payload: any): void;
 }
 
 declare class Model {

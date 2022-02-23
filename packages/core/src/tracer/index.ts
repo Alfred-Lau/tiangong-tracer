@@ -50,7 +50,10 @@ export default class Tracer extends Base {
     Promise.resolve()
       .then(this.prepare.bind(this))
       .then(this.run.bind(this))
-      .then(this.end.bind(this));
+      .then(this.end.bind(this))
+      .finally(() => {
+        log.info("", "");
+      });
   }
 
   public mergePluginOptions(name: string, option: Partial<CORE.PluginOptions>) {
@@ -104,30 +107,33 @@ export default class Tracer extends Base {
    * 2. 插件都启动之后，
    * 3. 启动应用上报
    */
-  public run() {
+  public run(): void {
     log.info("Tracer 开始进行启动");
 
     // 1. 启动实体
     for (const m of this[Model]) {
-      const { model } = m;
-      const instance = new model(this, () => {
-        log.info(instance.info);
+      const { model, name } = m;
+      const instance = new model(this, (info: any) => {
+        log.info("回调函数被调用了", info);
       });
+      this.set(this, `m_${name}`, instance);
     }
 
     // 2. 启动插件
     for (const p of this[Plugin]) {
       const { name, plugin } = p;
       const instance = new plugin(this, () => {
-        log.info(`${name} 插件被加载完成`);
+        log.info(`插件的回调函数被调用了`);
       });
+      this.set(this, `p_${name}`, instance);
     }
 
     //  3. 首次上报
-    return this.send("connect");
+    this.send("connect");
   }
 
   public end() {
-    log.info("Tracer 初始化完成");
+    log.info("Tracer 初始化完成,获得的 tracer 实例");
+    console.log(this);
   }
 }

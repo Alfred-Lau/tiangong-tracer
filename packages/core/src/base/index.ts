@@ -2,8 +2,9 @@
  * 请实现
  * 采集模块依赖的基类代码【1. 生命周期的机制实现；2. 插件机制的实现；3.】
  */
-import { noop, isFunction, log } from "@tg/utils";
+import { noop, isFunction, log, defineProperties } from "@tg/utils";
 import http from "../http";
+import Tracer from "../tracer";
 
 export default class Base implements BaseClass {
   public http: (...args: any[]) => void;
@@ -35,14 +36,34 @@ export default class Base implements BaseClass {
     this.afterEachSendPVEvents.push(fn);
   }
 
-  //  通用的挂载方法
-  public set(key: string, ctx: any) {}
+  /**
+   * 通用的挂载方法
+   * @param host 需要被挂载对象的 宿主对象
+   * @param key 需要被挂载的 key
+   * @param ctx 需要挂载 key 的描述对象
+   */
+  public set(host: Tracer, key: string, ctx: any) {
+    defineProperties<typeof host>(host, {
+      [key]: {
+        value: ctx,
+        configurable: false,
+        enumerable: false,
+        writable: false,
+        get() {
+          return this;
+        },
+        set(val) {
+          this[key] = val;
+        },
+      },
+    });
+  }
 
   // TODO: 生命周期的实现
-  public call(fn: string) {}
+  public call(signature: string, fn: string): void {}
 
   // 基础上报的实现
-  public async send(eventName: string): Promise<any> {
+  public async send(eventName: string) {
     this.beforeEachSendPVEvents.map((ev) => {
       ev && ev();
     });
@@ -53,7 +74,7 @@ export default class Base implements BaseClass {
 
     this.http(payload);
 
-    return Promise.resolve().finally(() => {
+    Promise.resolve().finally(() => {
       this.afterEachSendPVEvents.map((ev) => {
         ev && ev();
       });
