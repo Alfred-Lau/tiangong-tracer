@@ -1,10 +1,16 @@
 import UA from "ua-parser-js";
+import Tracer from "../tracer";
 
 export default class UserAgent implements Model {
   private ua: UA;
-  constructor() {
+  private tracer: Tracer;
+  public cb: handleType | undefined;
+  constructor(ins: Tracer, cb?: handleType) {
     this.ua = new UA();
+    this.tracer = ins;
+    this.cb = cb;
   }
+
   private _collect(): Model.UserAgentInfo {
     const browser = this.browser;
     const device = this.device;

@@ -10,6 +10,7 @@ export default class Base implements BaseClass {
   public beforeEachSendPVEvents: handleType[] = [];
   public afterEachSendPVEvents: handleType[] = [];
   public pluginCount: number = 0;
+  public modelCount: number = 0;
   public eventsCache: {};
   constructor(public name: string) {
     this.http = http;
@@ -34,9 +35,11 @@ export default class Base implements BaseClass {
     this.afterEachSendPVEvents.push(fn);
   }
 
-  // TODO: 事件注册
+  //  通用的挂载方法
+  public set(key: string, ctx: any) {}
 
   // TODO: 生命周期的实现
+  public call(fn: string) {}
 
   // 基础上报的实现
   public async send(eventName: string): Promise<any> {
