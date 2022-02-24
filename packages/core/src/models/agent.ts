@@ -11,7 +11,7 @@ export default class UserAgent extends EventEmitter implements Model {
     this.tracer = ins;
     this.cb = cb;
     this.ua = new UA();
-    this.cb && this.cb();
+    this.cb && this.cb(this);
   }
 
   private _collect(): Model.UserAgentInfo {

@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c4e2bbdb-3383-4e67-80c1-d9868317cd39" name="Changes" comment="feat: 重构了 tracer 的实现逻辑">
+    <list default="true" id="c4e2bbdb-3383-4e67-80c1-d9868317cd39" name="Changes" comment="feat: defineProperty 替换 defineProperties">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/core/src/base/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/core/src/base/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/core/src/http/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/core/src/http/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/core/src/utils/EventEmitter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/core/src/utils/EventEmitter.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/core/src/bootstrap.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/core/src/bootstrap.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/core/src/models/agent.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/core/src/models/agent.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/core/src/plugins/click.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/core/src/plugins/click.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/core/src/plugins/input.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/core/src/plugins/input.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/core/src/plugins/spa.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/core/src/plugins/spa.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/core/src/tracer/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/core/src/tracer/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/utils/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/utils/src/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/utils/src/log.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/utils/src/log.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,7 +122,7 @@
       <workItem from="1645270944530" duration="339000" />
       <workItem from="1645509841474" duration="17611000" />
       <workItem from="1645617238777" duration="68000" />
-      <workItem from="1645619608037" duration="3843000" />
+      <workItem from="1645619608037" duration="10787000" />
     </task>
     <task id="LOCAL-00001" summary="feat: typo">
       <created>1643557641766</created>
@@ -150,7 +152,14 @@
       <option name="project" value="LOCAL" />
       <updated>1645610785098</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="feat: defineProperty 替换 defineProperties">
+      <created>1645688105278</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1645688105278</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -173,7 +182,8 @@
     <MESSAGE value="feat: add basic class and log utils and lifecycle" />
     <MESSAGE value="feat: 添加了基类的前置后置钩子方法；业务tracer 进一步丰富功能，提供 model和插件的机制" />
     <MESSAGE value="feat: 重构了 tracer 的实现逻辑" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: 重构了 tracer 的实现逻辑" />
+    <MESSAGE value="feat: defineProperty 替换 defineProperties" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: defineProperty 替换 defineProperties" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

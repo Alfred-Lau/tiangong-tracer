@@ -1,4 +1,4 @@
-import { isEmptyObject, log, mergeOptions, noop } from "@tg/utils";
+import { bindEvent, isEmptyObject, log, mergeOptions, noop } from "@tg/utils";
 import Base from "../base";
 import click from "../plugins/click";
 import input from "../plugins/input";
@@ -30,6 +30,9 @@ export default class Tracer extends Base {
   // 这行 crazy
   private [Model]: Record<string, any>[];
   private [Plugin]: Record<string, any>[];
+  private tracerReady: boolean | null = null;
+  private pluginReady: boolean | null = null;
+  private modelReady: boolean | null = null;
   constructor(opts?: Partial<CORE.BootstrapOptions>) {
     super("");
     //此处初始化加载实体
@@ -39,6 +42,10 @@ export default class Tracer extends Base {
 
     this[Model] = [];
     this[Plugin] = [];
+
+    this.tracerReady = false;
+    this.pluginReady = false;
+    this.modelReady = false;
 
     if (opts?.beforeEachSendPV) {
       this.beforeEachSendPV(opts.beforeEachSendPV);
@@ -71,15 +78,40 @@ export default class Tracer extends Base {
     this[Model].push({ name: model.name, model });
   }
 
-  // TODO: 事件的注册和在整体 Tracer 上面的挂载
+  public addEventListener<T extends Window, K extends keyof WindowEventMap>(
+    target: T,
+    type: K,
+    handler: (this: Window, ev: WindowEventMap[K]) => any
+  ) {
+    const responsiveEventHandle = function () {};
+    bindEvent(target, type, handler);
+  }
+
+  // TODO: 生命周期的实现
+  public call(this: Tracer, type: string, ...args: any) {
+    console.log("type", type);
+    // @ts-ignore
+    this[type].apply(this, args);
+  }
+
+  // 基础事件簇
+  public click(options: any) {
+    return this.send("click", options);
+  }
+
+  public hover(options: any) {
+    return this.send("click", options);
+  }
+
+  public scroll(options: any) {
+    return this.send("click", options);
+  }
 
   /**
    * 1. 检查环境;
    * 2. 初始化各类实体，插件列表
    */
   public prepare() {
-    log.info("Tracer 开始进行前置检查");
-
     try {
       this.http({
         name: "http 模块检查成功",
@@ -108,24 +140,32 @@ export default class Tracer extends Base {
    * 3. 启动应用上报
    */
   public run(): void {
-    log.info("Tracer 开始进行启动");
-
     // 1. 启动实体
     for (const m of this[Model]) {
+      let index = 0;
       const { model, name } = m;
       const instance = new model(this, (info: any) => {
-        log.info("回调函数被调用了", info);
+        console.info("回调函数被调用了", info);
       });
       this.set(this, `m_${name}`, instance);
+
+      if (index++ === this.modelCount - 1) {
+        this.modelReady = true;
+      }
     }
 
     // 2. 启动插件
     for (const p of this[Plugin]) {
+      let index = 0;
       const { name, plugin } = p;
       const instance = new plugin(this, () => {
-        log.info(`插件的回调函数被调用了`);
+        console.info(`插件的回调函数被调用了`);
       });
       this.set(this, `p_${name}`, instance);
+
+      if (index++ === this.pluginCount - 1) {
+        this.pluginReady = true;
+      }
     }
 
     //  3. 首次上报
@@ -133,7 +173,6 @@ export default class Tracer extends Base {
   }
 
   public end() {
-    log.info("Tracer 初始化完成,获得的 tracer 实例");
-    console.log(this);
+    this.tracerReady = true;
   }
 }

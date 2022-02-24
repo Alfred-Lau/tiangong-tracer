@@ -1,8 +1,19 @@
 import { log } from "@tg/utils";
 import Tracer from "../tracer";
 
+function handlePageClick(e: MouseEvent): any {
+  e.preventDefault();
+  // @ts-ignore
+  log.info(e.target!.tagName);
+  this.call("click");
+}
+
 export default function (instance: Tracer, cb: handleType) {
-  log.info("我是click插件的实例");
-  log.info("我是click 插件中对应的实例", instance);
+  //1. 挂载相关绑定事件
+
+  const fnWrapper = (e: MouseEvent) => {
+    handlePageClick.call(instance, e);
+  };
+  instance.addEventListener(window, "click", fnWrapper);
   cb && cb();
 }

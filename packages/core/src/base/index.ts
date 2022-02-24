@@ -2,7 +2,7 @@
  * 请实现
  * 采集模块依赖的基类代码【1. 生命周期的机制实现；2. 插件机制的实现；3.】
  */
-import { noop, isFunction, log, defineProperty } from "@tg/utils";
+import { noop, isFunction, log, defineProperty, debounceFn } from "@tg/utils";
 import http from "../http";
 import Tracer from "../tracer";
 
@@ -14,18 +14,18 @@ export default class Base implements BaseClass {
   public modelCount: number = 0;
   public eventsCache: {};
   constructor(public name: string) {
-    this.time_start();
+    Base.time_start();
     this.http = http;
     //各类事件的缓存
     this.eventsCache = {};
-    this.time_end();
+    Base.time_end();
   }
 
-  private time_start() {
+  private static time_start() {
     log.timeStart();
   }
 
-  private time_end() {
+  private static time_end() {
     log.timeEnd();
   }
 
@@ -57,13 +57,8 @@ export default class Base implements BaseClass {
     });
   }
 
-  // TODO: 生命周期的实现
-  public call(signature: string, fn: string): void {}
-
-  // TODO:
-
   // 基础上报的实现
-  public async send(eventName: string) {
+  public async send(eventName: string, options?: any) {
     this.beforeEachSendPVEvents.map((ev) => {
       ev && ev();
     });
@@ -72,7 +67,10 @@ export default class Base implements BaseClass {
       eventType: "click",
     };
 
-    this.http(payload);
+    // 防抖处理
+    const debouncedFn = debounceFn(this.http);
+
+    debouncedFn(payload);
 
     Promise.resolve().finally(() => {
       this.afterEachSendPVEvents.map((ev) => {

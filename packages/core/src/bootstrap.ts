@@ -38,7 +38,7 @@ if (isBrowser) {
       threshold: 3000,
     });
   } catch (e) {
-    log.error("row", "sdk 初始化发生了错误");
+    log.error("sdk 初始化发生了错误", e as string);
   }
 }
 // 针对浏览器环境，直接挂载，npm 模式下 只导出对应方法
