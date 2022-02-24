@@ -28,8 +28,6 @@ export default function (data: SimpleEventPayloadType) {
           data
         );
       }
-
-      // return send(ALiYunSLSAddress, JSON.stringify(data));
     }
   } catch (e) {
     log.error("http 模块发生了错误", "http");

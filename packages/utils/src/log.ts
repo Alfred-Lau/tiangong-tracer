@@ -24,3 +24,11 @@ export function info(msg: string | number | object, ...rest: any[]) {
     );
   }
 }
+
+export function timeStart() {
+  console.time();
+}
+
+export function timeEnd() {
+  console.timeEnd();
+}

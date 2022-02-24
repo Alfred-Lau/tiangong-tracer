@@ -2,16 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4e2bbdb-3383-4e67-80c1-d9868317cd39" name="Changes" comment="feat: 重构了 tracer 的实现逻辑">
-      <change afterPath="$PROJECT_DIR$/packages/core/src/utils/EventEmitter.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/core/src/base/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/core/src/base/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/core/src/bootstrap.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/core/src/bootstrap.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/core/src/http/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/core/src/http/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/core/src/models/agent.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/core/src/models/agent.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/core/src/tracer/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/core/src/tracer/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/core/src/typings/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/core/src/typings/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/core/src/utils/EventEmitter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/core/src/utils/EventEmitter.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/utils/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/utils/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/utils/src/log.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/utils/src/log.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,6 +119,8 @@
       <workItem from="1645261603482" duration="536000" />
       <workItem from="1645270944530" duration="339000" />
       <workItem from="1645509841474" duration="17611000" />
+      <workItem from="1645617238777" duration="68000" />
+      <workItem from="1645619608037" duration="3843000" />
     </task>
     <task id="LOCAL-00001" summary="feat: typo">
       <created>1643557641766</created>
