@@ -8,6 +8,7 @@
     "browser": "lib/index.browser.js",
     "scripts": {
         "dev": "rimraf ./lib & rollup -c --watch",
+        "build": "rimraf ./lib & rollup -c",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "dependencies": {
