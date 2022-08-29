@@ -5,6 +5,7 @@
     "main": "index.js",
     "scripts": {
         "start": "pnpm -C ./packages/core dev & pnpm -C ./packages/utils dev & pnpm -C ./packages/shared dev",
+        "build": "pnpm -C ./packages/core build & pnpm -C ./packages/utils build & pnpm -C ./packages/shared build",
         "open": "open-cli http://localhost:3000",
         "test": "echo \"Error: no test specified\" && exit 1"
     },

@@ -6,6 +6,7 @@
   "types": "lib/index.d.ts",
   "scripts": {
     "dev": "rimraf ./lib & tsc --watch",
+    "build": "rimraf ./lib & tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
