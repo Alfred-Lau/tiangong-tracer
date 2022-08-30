@@ -19,7 +19,7 @@
         <script>
             console.log(window.tiangong_tracer);
             if(window.tiangong_tracer){
-                tiangong_tracer.send('quick_search#doc',{env:window.location.origin, uid:window.userid || localStorage.getItem('ofx_session_key')})
+                tiangong_tracer.send('quick_search#doc',{env:window.location.origin,kw:'oceanbase cloud', uid:window.userid || localStorage.getItem('ofx_session_key')})
             }
         </script>
     </body>
