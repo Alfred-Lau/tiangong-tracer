@@ -1,19 +1,20 @@
 import { log } from "@tg/utils";
 import Tracer from "../tracer";
 
-function handlePageClick(this:any,e: MouseEvent): any {
+// 进行页面性能采集上报
+function calcPagePerformance(this:any,e: Event): any {
   e.preventDefault();
   // @ts-ignore
   log.info(e.target!.tagName);
-  this.call("click");
+  this.call("performance");
 }
 
 export default function (instance: Tracer, cb: handleType) {
   //1. 挂载相关绑定事件
 
-  const fnWrapper = (e: MouseEvent) => {
-    handlePageClick.call(instance, e);
+  const fnWrapper = (e: Event) => {
+    calcPagePerformance.call(instance, e);
   };
-  instance.addEventListener(window, "click", fnWrapper);
+  instance.addEventListener(window, "load", fnWrapper);
   cb && cb();
 }
