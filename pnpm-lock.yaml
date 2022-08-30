@@ -45,14 +45,21 @@ importers:
       rollup: 2.67.2
       rollup-plugin-node-builtins: 2.1.2
 
+  packages/shared:
+    specifiers: {}
+
   packages/utils:
     specifiers:
       '@types/js-cookie': ^3.0.1
+      '@types/uuid': ^8.3.4
       js-cookie: ^3.0.1
+      uuid: ^8.3.2
     dependencies:
       js-cookie: 3.0.1
+      uuid: 8.3.2
     devDependencies:
       '@types/js-cookie': 3.0.1
+      '@types/uuid': 8.3.4
 
 packages:
 
@@ -232,6 +239,10 @@ packages:
 
   /@types/ua-parser-js/0.7.36:
     resolution: {integrity: sha512-N1rW+njavs70y2cApeIw1vLMYXRwfBy+7trgavGuuTfOd7j1Yh7QTRc/yqsPl6ncokt72ZXuxEU0PiCp9bSwNQ==}
+    dev: true
+
+  /@types/uuid/8.3.4:
+    resolution: {integrity: sha512-c/I8ZRb51j+pYGAu5CrFMRxqZ2ke4y2grEBO5AUjgSkSk+qT2Ea+OdWElz/OiMf5MNpn2b17kuVBwZLQJXzihw==}
     dev: true
 
   /abstract-leveldown/0.12.4:
@@ -1612,6 +1623,11 @@ packages:
   /util-deprecate/1.0.2:
     resolution: {integrity: sha1-RQ1Nyfpw3nMnYvvS1KKJgUGaDM8=}
     dev: true
+
+  /uuid/8.3.2:
+    resolution: {integrity: sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==}
+    hasBin: true
+    dev: false
 
   /validate-npm-package-license/3.0.4:
     resolution: {integrity: sha512-DpKm2Ui/xN7/HQKCtpZxoRWBhZ9Z0kqtygG8XCgNQ8ZlDnxuQmWhj566j8fN4Cu3/JmbhsDo7fcAJq4s9h27Ew==}

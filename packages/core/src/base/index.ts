@@ -6,6 +6,11 @@ import { noop, isFunction, log, defineProperty, debounceFn } from "@tg/utils";
 import http from "../http";
 import Tracer from "../tracer";
 
+export type SendOptionType = {
+  env: string
+  uid: string
+}
+
 export default class Base implements BaseClass {
   public http: (...args: any[]) => void;
   public beforeEachSendPVEvents: handleType[] = [];
@@ -58,19 +63,20 @@ export default class Base implements BaseClass {
   }
 
   // 基础上报的实现
-  public async send(eventName: string, options?: any) {
+  public async send(eventName: string, options?: SendOptionType) {
     this.beforeEachSendPVEvents.map((ev) => {
       ev && ev();
     });
 
     const payload: Partial<SimpleEventPayloadType> = {
-      eventType: "click",
+      eventType: eventName,
     };
 
     // 防抖处理
     const debouncedFn = debounceFn(this.http);
 
-    debouncedFn(payload);
+
+    (debouncedFn as any)({...payload,...options});
 
     Promise.resolve().finally(() => {
       this.afterEachSendPVEvents.map((ev) => {

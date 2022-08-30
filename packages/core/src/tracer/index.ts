@@ -1,4 +1,4 @@
-import { bindEvent, isEmptyObject, log, mergeOptions, noop } from "@tg/utils";
+import { bindEvent, isEmptyObject, log, mergeOptions, noop, uuid } from "@tg/utils";
 import Base from "../base";
 import click from "../plugins/click";
 import input from "../plugins/input";
@@ -33,6 +33,8 @@ export default class Tracer extends Base {
   private tracerReady: boolean | null = null;
   private pluginReady: boolean | null = null;
   private modelReady: boolean | null = null;
+
+  private TRACERT_SESSION_ID:string
   constructor(opts?: Partial<CORE.BootstrapOptions>) {
     super("");
     //此处初始化加载实体
@@ -47,6 +49,8 @@ export default class Tracer extends Base {
     this.pluginReady = false;
     this.modelReady = false;
 
+    this.TRACERT_SESSION_ID = 'ofx_session_key'
+
     if (opts?.beforeEachSendPV) {
       this.beforeEachSendPV(opts.beforeEachSendPV);
     }
@@ -59,7 +63,7 @@ export default class Tracer extends Base {
       .then(this.run.bind(this))
       .then(this.end.bind(this))
       .finally(() => {
-        log.info("", "");
+        log.info("初始化结束", "");
       });
   }
 
@@ -107,6 +111,8 @@ export default class Tracer extends Base {
     return this.send("click", options);
   }
 
+
+
   /**
    * 1. 检查环境;
    * 2. 初始化各类实体，插件列表
@@ -118,6 +124,12 @@ export default class Tracer extends Base {
       });
     } catch (e) {
       log.error("check failed", "检查失败，不会启动实例");
+    }
+
+    // 初始化 session cookie id
+    const key = this.TRACERT_SESSION_ID
+    if(!localStorage.getItem(key)){
+      localStorage.setItem(key, `${uuid()}_${new Date().getTime()}}`)
     }
     //  加载实体: 传参监视；默认 defaultModels 这个需要做处理
     for (const p of defaultModels) {

@@ -1,3 +1,4 @@
+import { v4 as uuidv4 } from 'uuid';
 export const isBrowser = typeof window !== "undefined";
 export const noop = () => {};
 export const isFunction = (fn: any): fn is Function => {
@@ -38,12 +39,12 @@ export const bindEvent = <T extends Window, K extends keyof WindowEventMap>(
  */
 export const debounceFn = (
   fn: (...args: any) => any,
-  wait = 200,
-  isImmediate = false
+  wait:number = 200,
+  isImmediate:boolean = false
 ) => {
   let timer: NodeJS.Timer | null = null;
 
-  return function (this: typeof debounceFn, ...args: any[]) {
+  return function (this:any,...args: any[]) {
     if (timer) {
       clearTimeout(timer);
     }
@@ -55,8 +56,8 @@ export const debounceFn = (
     timer = setTimeout(() => {
       fn.apply(this, args);
     }, wait);
-  };
-};
+  } 
+} 
 
 /**
  * 获取鼠标位置
@@ -68,6 +69,10 @@ export const getMousePosition = (e: MouseEvent): { x: number; y: number } => {
     y: e.screenY,
   };
 };
+
+export const uuid = () => {
+  return uuidv4()
+}
 
 export * as log from "./log";
 export * as cookie from "./cookie";

@@ -1,4 +1,4 @@
-type EventHandlerType = "scroll" | "click" | "hover";
+type EventHandlerType = "scroll" | "click" | "hover" | string;
 
 type SimpleEventPayloadType = {
   // 事件类型
