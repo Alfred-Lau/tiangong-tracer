@@ -18,6 +18,7 @@ importers:
 
   packages/core:
     specifiers:
+      '@aliyun-sls/web-track-browser': ^0.0.3
       '@rollup/plugin-alias': ^3.1.9
       '@rollup/plugin-commonjs': ^21.0.1
       '@rollup/plugin-dynamic-import-vars': ^1.4.2
@@ -31,6 +32,7 @@ importers:
       rollup-plugin-node-builtins: ^2.1.2
       ua-parser-js: ^1.0.2
     dependencies:
+      '@aliyun-sls/web-track-browser': 0.0.3
       '@tg/shared': link:../shared
       '@tg/utils': link:../utils
       ua-parser-js: 1.0.2
@@ -62,6 +64,10 @@ importers:
       '@types/uuid': 8.3.4
 
 packages:
+
+  /@aliyun-sls/web-track-browser/0.0.3:
+    resolution: {integrity: sha512-RYJaZN2A8TKTHsem29B/8IRvjBk4ow0IjrzsTlEfxJtUoRIgtKpI6pEgvtI2LKUqN1/vEz6WzzFA+zttMSN3Fw==}
+    dev: false
 
   /@babel/code-frame/7.16.7:
     resolution: {integrity: sha512-iAXqUn8IIeBTNd72xsFlgaXHkMBMt6y4HJp1tIaK465CWLT/fG1aqB7ykr95gHHmlBdGbFeWWfyB4NJJ0nmeIg==}
