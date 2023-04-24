@@ -1,14 +1,17 @@
--   workspaces 是需要在 pnpm install 的时候安装的
+# README
 
-# how to start
+- workspaces 是需要在 pnpm install 的时候安装的
+
+## how to start
 
 1. pnpm install
 2. pnpm start
 3. open examples/basic/index.html
 
-# 系统设计
+## 系统设计
 
 release 1.0 具备的能力
+
 - 上报接口 和 sls 的 sdk 集成
 - 直接挂载 版本的信息
 - 匿名用户生成 uuid
@@ -28,6 +31,7 @@ release 1.0 具备的能力
   - tracer 实现挂载超时重试，简易 的生命周期
 
 0216：
+
 - 描述功能
   - 挂载一个全功能的采集实例用来 支持业务方的主动调用
     - api 设计：出参，入参，
@@ -40,6 +44,7 @@ release 1.0 具备的能力
 - 补充测试用例
 
 0218:
+
 - 描述主动功能，拆解任务
   - base 基类提供 
     - beforeSend 等之类的 生命周期钩子
@@ -48,12 +53,6 @@ release 1.0 具备的能力
     - 更高层次的便捷的业务封装
     - 暴露通用的对外接口实现
     - 在这一层实现插件机制？
-
-
 - 异常判断很重要
 - 设计模式很重要
 - 抽离和重构很重要
-
-
-
-
