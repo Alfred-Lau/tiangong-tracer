@@ -3,7 +3,7 @@
 const REPORT_URL =
   process.env.NODE_ENV === 'production'
     ? 'https://www.baidu.com'
-    : 'http://localhost:3000';
+    : 'http://localhost:4000';
 
 function xhr(data: string) {
   const xhr = new XMLHttpRequest();

@@ -19,10 +19,10 @@ function basicHttp(url: string, data: any) {
 
 export default function (
   data: SimpleEventPayloadType,
-  throughtAPI: boolean = false
+  throughAPI: boolean = true // 默认使用接口上传
 ) {
   try {
-    if (!throughtAPI) {
+    if (!throughAPI) {
       tracker.send({ msg: 'hello,world' });
       return;
     } else {
