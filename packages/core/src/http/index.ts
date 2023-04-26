@@ -1,9 +1,9 @@
-import { isBrowser, cookie, log } from "@tg/utils";
-import { ALiYunSLSAddress, CSRF_AUTHORIZATION_KEY } from "@tg/shared";
-import tracker from "../sls";
+import { isBrowser, cookie, log } from '@tg/utils';
+import { ALiYunSLSAddress, CSRF_AUTHORIZATION_KEY } from '@tg/shared';
+import tracker from '../sls';
 
 const _csrf_authentication =
-  cookie.getCookie(CSRF_AUTHORIZATION_KEY) || "OY3i2d-Dp9C2wGe14EslzT61";
+  cookie.getCookie(CSRF_AUTHORIZATION_KEY) || 'OY3i2d-Dp9C2wGe14EslzT61';
 
 function genImgUrl(url: string, data: any) {
   const formatted = JSON.stringify(data);
@@ -11,19 +11,21 @@ function genImgUrl(url: string, data: any) {
 }
 
 function basicHttp(url: string, data: any) {
-  const img = document?.createElement("img");
+  const img = document?.createElement('img');
   img.src = genImgUrl(url, data);
-  img.style.display = "none";
+  img.style.display = 'none';
   document.body.appendChild(img);
 }
 
-export default function (data: SimpleEventPayloadType, throughtAPI:boolean = false) {
+export default function (
+  data: SimpleEventPayloadType,
+  throughtAPI: boolean = false
+) {
   try {
-
-    if(!throughtAPI){
-      tracker.send({msg: 'hello,world'})
-      return 
-    }else{
+    if (!throughtAPI) {
+      tracker.send({ msg: 'hello,world' });
+      return;
+    } else {
       if (isBrowser) {
         if (navigator.sendBeacon) {
           // sendBeacon 支持
@@ -36,8 +38,7 @@ export default function (data: SimpleEventPayloadType, throughtAPI:boolean = fal
         }
       }
     }
-
   } catch (e) {
-    log.error("http 模块发生了错误", "http");
+    log.error('http 模块发生了错误', 'http');
   }
 }
