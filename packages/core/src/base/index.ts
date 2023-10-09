@@ -2,14 +2,15 @@
  * 请实现
  * 采集模块依赖的基类代码【1. 生命周期的机制实现；2. 插件机制的实现；3.】
  */
-import { noop, isFunction, log, defineProperty, debounceFn } from "@tg/utils";
-import http from "../http";
-import Tracer from "../tracer";
+import { noop, isFunction, log, defineProperty, debounceFn } from '@tg/utils';
+import http from '../http';
+import Tracer from '../tracer';
 
 export type SendOptionType = {
-  env: string
-  uid: string
-}
+  env: string;
+  uid: string;
+  throughAPI: boolean;
+};
 
 export default class Base implements BaseClass {
   public http: (...args: any[]) => void;
@@ -37,14 +38,14 @@ export default class Base implements BaseClass {
   // 事件周期的回调
   public beforeEachSendPV(fn = noop) {
     if (!isFunction(fn)) {
-      log.error("注册的事件只能是函数", "");
+      log.error('注册的事件只能是函数', '');
       return;
     }
     this.beforeEachSendPVEvents.push(fn);
   }
   public afterEachSendPV(fn = noop) {
     if (!isFunction(fn)) {
-      log.error("注册的事件只能是函数", "");
+      log.error('注册的事件只能是函数', '');
       return;
     }
     this.afterEachSendPVEvents.push(fn);
@@ -75,8 +76,7 @@ export default class Base implements BaseClass {
     // 防抖处理
     const debouncedFn = debounceFn(this.http);
 
-
-    (debouncedFn as any)({...payload,...options});
+    (debouncedFn as any)({ ...payload, ...options });
 
     Promise.resolve().finally(() => {
       this.afterEachSendPVEvents.map((ev) => {

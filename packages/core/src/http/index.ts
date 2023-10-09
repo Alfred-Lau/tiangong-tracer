@@ -19,11 +19,11 @@ function basicHttp(url: string, data: any) {
 
 export default function (
   data: SimpleEventPayloadType,
-  throughAPI: boolean = true // 默认使用接口上传
+  throughAPI: boolean = false // 默认使用日志上传
 ) {
   try {
     if (!throughAPI) {
-      tracker.send({ msg: 'hello,world' });
+      tracker.send(data);
       return;
     } else {
       if (isBrowser) {

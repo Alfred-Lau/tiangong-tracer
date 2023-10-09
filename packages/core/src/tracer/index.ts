@@ -124,9 +124,12 @@ export default class Tracer extends Base {
    */
   public prepare() {
     try {
-      this.http({
-        name: 'http 模块检查成功',
-      });
+      this.http(
+        {
+          name: 'http 模块检查成功',
+        },
+        {}
+      );
     } catch (e) {
       log.error('check failed', '检查失败，不会启动实例');
     }
