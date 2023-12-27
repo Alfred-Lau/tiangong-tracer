@@ -1,5 +1,5 @@
 {
-  "name": "@tg/core",
+  "name": "core",
   "version": "1.0.0",
   "description": "",
   "main": "lib/index.js",
@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@aliyun-sls/web-track-browser": "^0.0.3",
-    "@tg/utils": "workspace:^1.0.0",
+    "utils": "workspace:^1.0.0",
     "ua-parser-js": "^1.0.2"
   },
   "devDependencies": {

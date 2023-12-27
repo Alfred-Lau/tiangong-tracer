@@ -1,11 +1,4 @@
-import {
-  bindEvent,
-  isEmptyObject,
-  log,
-  mergeOptions,
-  noop,
-  uuid,
-} from '@tg/utils';
+import { bindEvent, isEmptyObject, log, mergeOptions, noop, uuid } from 'utils';
 import Base from '../base';
 import click from '../plugins/click';
 import input from '../plugins/input';

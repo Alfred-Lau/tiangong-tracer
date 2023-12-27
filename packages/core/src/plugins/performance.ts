@@ -1,12 +1,12 @@
-import { log } from "@tg/utils";
-import Tracer from "../tracer";
+import { log } from 'utils';
+import Tracer from '../tracer';
 
 // 进行页面性能采集上报
-function calcPagePerformance(this:any,e: Event): any {
+function calcPagePerformance(this: any, e: Event): any {
   e.preventDefault();
   // @ts-ignore
   log.info(e.target!.tagName);
-  this.call("performance");
+  this.call('performance');
 }
 
 export default function (instance: Tracer, cb: handleType) {
@@ -15,6 +15,6 @@ export default function (instance: Tracer, cb: handleType) {
   const fnWrapper = (e: Event) => {
     calcPagePerformance.call(instance, e);
   };
-  instance.addEventListener(window, "load", fnWrapper);
+  instance.addEventListener(window, 'load', fnWrapper);
   cb && cb();
 }

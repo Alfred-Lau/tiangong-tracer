@@ -2,6 +2,7 @@ import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import typescript from '@rollup/plugin-typescript';
 import buildin from 'rollup-plugin-node-builtins';
+// import alias from '@rollup/plugin-alias';
 import pkg from './package.json';
 import path from 'path';
 const production = !process.env.ROLLUP_WATCH;
@@ -22,7 +23,16 @@ export default [
       typescript({
         sourceMap: !production,
         inlineSources: !production,
+        lib: ['es2015'],
       }), // so Rollup can convert TypeScript to JavaScript
+      // alias({
+      //   entries: [
+      //     {
+      //       find: 'utils',
+      //       replacement: path.resolve(__dirname, '../utils/src/index.ts'),
+      //     },
+      //   ],
+      // }),
     ],
   },
 
@@ -36,6 +46,14 @@ export default [
         sourceMap: !production,
         inlineSources: !production,
       }), // so Rollup can convert TypeScript to JavaScript
+      // alias({
+      //   entries: [
+      //     {
+      //       find: 'utils',
+      //       replacement: path.resolve(__dirname, '../utils/src/index.ts'),
+      //     },
+      //   ],
+      // }),
     ],
     output: [
       { file: pkg.main, format: 'cjs', sourcemap: !production },

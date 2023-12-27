@@ -42,7 +42,7 @@ export const debounceFn = (
   wait: number = 200,
   isImmediate: boolean = false
 ) => {
-  let timer: NodeJS.Timer | null = null;
+  let timer: any;
 
   return function (this: any, ...args: any[]) {
     if (timer) {

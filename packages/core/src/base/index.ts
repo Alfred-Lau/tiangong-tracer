@@ -2,7 +2,7 @@
  * 请实现
  * 采集模块依赖的基类代码【1. 生命周期的机制实现；2. 插件机制的实现；3.】
  */
-import { noop, isFunction, log, defineProperty, debounceFn } from '@tg/utils';
+import { noop, isFunction, log, defineProperty, debounceFn } from 'utils';
 import http from '../http';
 import Tracer from '../tracer';
 
