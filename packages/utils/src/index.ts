@@ -1,8 +1,8 @@
 import { v4 as uuidv4 } from 'uuid';
-export const isBrowser = typeof window !== "undefined";
+export const isBrowser = typeof window !== 'undefined';
 export const noop = () => {};
 export const isFunction = (fn: any): fn is Function => {
-  return typeof fn === "function";
+  return typeof fn === 'function';
 };
 
 export const mergeOptions = (target: object, dest: object) => {
@@ -39,12 +39,12 @@ export const bindEvent = <T extends Window, K extends keyof WindowEventMap>(
  */
 export const debounceFn = (
   fn: (...args: any) => any,
-  wait:number = 200,
-  isImmediate:boolean = false
+  wait: number = 200,
+  isImmediate: boolean = false
 ) => {
   let timer: NodeJS.Timer | null = null;
 
-  return function (this:any,...args: any[]) {
+  return function (this: any, ...args: any[]) {
     if (timer) {
       clearTimeout(timer);
     }
@@ -56,8 +56,8 @@ export const debounceFn = (
     timer = setTimeout(() => {
       fn.apply(this, args);
     }, wait);
-  } 
-} 
+  };
+};
 
 /**
  * 获取鼠标位置
@@ -71,8 +71,9 @@ export const getMousePosition = (e: MouseEvent): { x: number; y: number } => {
 };
 
 export const uuid = () => {
-  return uuidv4()
-}
+  return uuidv4();
+};
 
-export * as log from "./log";
-export * as cookie from "./cookie";
+export * as log from './log';
+export * as cookie from './cookie';
+export * from './constant';

@@ -1,5 +1,5 @@
 import { isBrowser, cookie, log } from '@tg/utils';
-import { ALiYunSLSAddress, CSRF_AUTHORIZATION_KEY } from '@tg/shared';
+import { ALiYunSLSAddress, CSRF_AUTHORIZATION_KEY } from '@tg/utils';
 import tracker from '../sls';
 
 const _csrf_authentication =
