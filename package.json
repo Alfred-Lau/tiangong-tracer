@@ -4,8 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "pnpm -C ./packages/core dev & pnpm -C ./packages/utils dev & pnpm -C ./packages/shared dev",
-    "build": "pnpm -C ./packages/core build & pnpm -C ./packages/utils build & pnpm -C ./packages/shared build",
+    "dev": "pnpm -r  --filter \"./packages/*\" --parallel run dev",
+    "build": "pnpm -r --filter \"./packages/*\" run build",
+    "publish-all": "pnpm --filter \"./packages/*\" --parallel run release",
+    "version-update": "pnpm --filter \"./packages/*\" version patch",
+    "publish-some": "pnpm --filter \"@my-monorepo/specific-package\" run release",
     "open": "open-cli http://localhost:3000",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,7 +19,7 @@
     "open-cli": "^7.0.1",
     "prettier": "^2.5.1",
     "rimraf": "^3.0.2",
-    "tslib": "2.2.0",
-    "typescript": "^4.5.5"
+    "tslib": "^2.6.2",
+    "typescript": "^5.3.3"
   }
 }

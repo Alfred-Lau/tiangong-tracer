@@ -46,7 +46,7 @@ release 1.0 具备的能力
 0218:
 
 - 描述主动功能，拆解任务
-  - base 基类提供 
+  - base 基类提供
     - beforeSend 等之类的 生命周期钩子
     - 还有基础的上报能力；
   - tracer 类进行
@@ -56,3 +56,6 @@ release 1.0 具备的能力
 - 异常判断很重要
 - 设计模式很重要
 - 抽离和重构很重要
+
+  "build": "pnpm -C ./packages/core build & pnpm -C ./packages/utils build & pnpm -C ./packages/shared build",
+  "start": "pnpm -C ./packages/core dev & pnpm -C ./packages/utils dev & pnpm -C ./packages/shared dev",
