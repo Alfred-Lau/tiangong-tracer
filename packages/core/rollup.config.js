@@ -1,7 +1,7 @@
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import typescript from '@rollup/plugin-typescript';
-import buildin from 'rollup-plugin-node-builtins';
+import buildIn from 'rollup-plugin-node-builtins';
 // import alias from '@rollup/plugin-alias';
 import pkg from './package.json';
 import path from 'path';
@@ -18,7 +18,7 @@ export default [
     },
     plugins: [
       resolve(), // so Rollup can find `ms`
-      buildin(),
+      buildIn(),
       commonjs(), // so Rollup can convert `ms` to an ES module
       typescript({
         sourceMap: !production,
